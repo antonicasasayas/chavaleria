@@ -4,13 +4,17 @@ import NFTCard from "./components/NFTCard";
 import { useState } from "react";
 import { ethers } from "ethers";
 import roboPunksNFT from "./RoboPunksNFT.json";
-const roboPunksNFTAddress = "0x196E863Dc5e888743ae6C3ceE5D9F0C4601F21c3";
+const roboPunksNFTAddress = "0x60C94A7DAcfEc4D96c73F5938e05EF26c89f738D";
 function App() {
 	const [accounts, setAccounts] = useState([]);
 	const isConnected = Boolean(accounts[0]);
 	const [mintAmount, setMintAmount] = useState(1);
 
 	const handleMint = async (index, metadata_url) => {
+		if(!isConnected) {
+			connectAccount();
+			return;
+		}
 		if (window.ethereum) {
 			const provider = new ethers.providers.Web3Provider(window.ethereum);
 			const signer = provider.getSigner();
