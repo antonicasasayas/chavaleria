@@ -1,6 +1,8 @@
-import "./App.css";
+import data from "./data.json";
+import NFTCard from "./components/NFTCard";
+
 import { useState } from "react";
-import { ethers} from "ethers";
+import { ethers } from "ethers";
 import roboPunksNFT from "./RoboPunksNFT.json";
 const roboPunksNFTAddress = "0x196E863Dc5e888743ae6C3ceE5D9F0C4601F21c3";
 function App() {
@@ -8,7 +10,7 @@ function App() {
 	const isConnected = Boolean(accounts[0]);
 	const [mintAmount, setMintAmount] = useState(1);
 
-	const handleMint = async () => {
+	const handleMint = async (index, metadata_url) => {
 		if (window.ethereum) {
 			const provider = new ethers.providers.Web3Provider(window.ethereum);
 			const signer = provider.getSigner();
@@ -20,8 +22,8 @@ function App() {
 			try {
 				const response = await contract.mint(
 					accounts[0],
-					1,
-					"ipfs://bafkreicirnoudxeareo375iffa3hkvtyxptau2klc4qk3zxvjukvmv7g54"
+					index,
+					metadata_url
 				);
 				console.log("response", response);
 			} catch (err) {
@@ -47,25 +49,23 @@ function App() {
 		if (mintAmount >= 3) return;
 		setMintAmount((prevAmount) => prevAmount + 1);
 	};
-	console.log(accounts[0]);
 
 	return (
-		<div className="App">
-			{isConnected ? (
-				<p>Connected</p>
-			) : (
-				<button onClick={connectAccount}>Connect</button>
-			)}
-			{isConnected ? (
-				<div>
-					<button onClick={handleDecrement}>-</button>
-					<input type="number" value={mintAmount} />
-					<button onClick={handleIncrement}>+</button>
-					<button onClick={handleMint}>Mint</button>
-				</div>
-			) : (
-				""
-			)}
+		<div className="">
+			<div className="flex justify-end mb-4">
+				{isConnected ? (
+					<p className="text-xl pt-4 pr-4">Conectado</p>
+				) : (
+					<button onClick={connectAccount}>Conectar METAMASK</button>
+				)}
+			</div>
+			<h1 className="text-5xl font-extrabold text-center">Chavaleria</h1>
+
+			<div className="lg:grid lg:grid-cols-3 w-screen ">
+				{data.map((nft, i) => (
+					<NFTCard handleMint={handleMint} key={i} NFT={nft} index={i}/>
+				))}
+			</div>
 		</div>
 	);
 }

@@ -1,0 +1,44 @@
+[
+	{
+		"name": "DahVys",
+		"description": "David 'DahVys' Casco Ortega is a League of Legends esports player, currently jungler for Wizards.",
+		"image": "ipfs://bafkreihut5arfsdmtlcebibnqwc6sq3rvdxhbdokpolljitkga7jpbqtgq",
+		"metadata_url": "ipfs://bafkreifjm37ifqtwu743x7vmvva2xyvwdw2rgcwptc2camrtegtuduytzu",
+		"imgSrc": "0.jpg"
+	},
+	{
+		"name": "Siler",
+		"description": "Ernesto \"Siler\" Castañeda Serrano is a League of Legends esports player, previously mid laner for Case Esports.",
+		"image": "ipfs://bafkreicet3l6grsneply6gcwmf4rrwrqaexvgfwxltywxa3jqw7kxrqmpm",
+		"metadata_url": "ipfs://bafkreicirnoudxeareo375iffa3hkvtyxptau2klc4qk3zxvjukvmv7g54",
+		"imgSrc": "1.webp"
+	},
+	{
+		"name": "Sallan",
+		"description": "Streamer de twitch con 100 viewers de media.",
+		"image": "ipfs://bafkreia344mgkx6rkvitbvezs2us7bkgwqdj2ysa7igclwk44v7pj3uo4e",
+		"metadata_url": "ipfs://bafkreiajqmbzktl6hhjen6hxrianlgsssmoozn2x57q3vunsnomq44vbuy",
+		"imgSrc": "2.jpg"
+	},
+	{
+		"name": "Karakal JR",
+		"description": "Apurando los pocos pelos que le quedan desde 2016.",
+		"image": "ipfs://bafkreibxvso4bawu67n6bhq54edfzjq45tuo7v75zmqwlhondrvsgjqyme",
+		"metadata_url": "ipfs://bafkreihmx2wpags24moe7bi6hm7zoiab6ckz5frwmehej2lrvi2vgn5i34",
+		"imgSrc": "3.jpeg"
+	},
+	{
+		"name": "Send0o",
+		"description": "Rosendo Fuentes, su peak fue en 2017. Desde entonces, namas que pa abajo.",
+		"image": "ipfs://bafkreiesakjdgeg3hqkjlm2ih3siu77fhysfp63zwg4t6d65vafle7fdgy",
+		"metadata_url": "ipfs://bafkreick2oll3j25c2fxwvyu6fi6vjrtonj4aa4jz4de6cdwuhijt6rtpy",
+		"imgSrc": "4.png"
+	},
+	{
+		"name": "JaVaaa",
+		"description": "Donde esta Sturridge? Pues lo mismo.",
+		"image": "ipfs://bafkreiahxwn2gl4lfgtoxhtglzhjl2s4nib6awzf5fbjgjyxah4yuzw4fq",
+		"metadata_url": "ipfs://bafkreic3tycwc5h2qjvbvcrtrwrlk36a7oe5h6nxh7tsygutapzudh524q",
+		"imgSrc": "5.webp"
+	}
+]
